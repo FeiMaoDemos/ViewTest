@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="edittext_demo">
+        <item name="android:textSelectHandle">@drawable/handle_image</item>
+        <item name="android:textSelectHandleLeft">@drawable/handle_left_image</item>
+        <item name="android:textSelectHandleRight">@drawable/handle_right_image</item>
+    </style>
+
+</resources>

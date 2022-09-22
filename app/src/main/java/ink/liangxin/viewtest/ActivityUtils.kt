@@ -39,7 +39,8 @@ fun RecyclerView.initActivityList(context: Context) {
  * Activity集合
  */
 private val activitys = listOf<Pair<String, Class<out Activity>>>(
-    "View位置API测试" to ViewLocationActivity::class.java
+    "View位置API测试" to ViewLocationActivity::class.java,
+    "EditText测试" to EditTextActivity::class.java
 )
 
 /**
