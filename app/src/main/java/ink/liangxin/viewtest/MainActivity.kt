@@ -1,23 +1,28 @@
 package ink.liangxin.viewtest
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
+import ink.liangxin.demoutils.activity.activitylist.ActivityListActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ActivityListActivity() {
 
-    /**
-     * 入口列表
-     */
-    private val recyclerView by lazy {
-        findViewById<RecyclerView>(R.id.recycler_view)
-    }
+	override val activityList: List<Pair<String, Class<out Activity>>> =
+		listOf<Pair<String, Class<out Activity>>>(
+			"View位置API测试" to ViewLocationActivity::class.java,
+			"EditText测试" to EditTextActivity::class.java
+		)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+	/**
+	 * 入口列表
+	 */
+	override val recyclerView: RecyclerView by lazy {
+		findViewById(R.id.recycler_view)
+	}
 
-        recyclerView.initActivityList(this)
-    }
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContentView(R.layout.activity_main)
+	}
 
 }
